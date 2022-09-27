@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+img, picture {
+    max-width: 100%;
+    display: block;
+    line-height: 0;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+}
+
+:root {
+    --background-color: #edeff7;
+    --alternative-bg-color: #5e70f1;
+
+    --card-bg-color:#edeff7;
+
+    --main-font-color: #141f72;
+    --alternative-font-color: #141f72;
+}
+
+body {
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(60deg, var(--alternative-bg-color) 0%, var(--background-color) 100%);
+}
+
+.card {
+    background-color: var(--card-bg-color);
+    padding: 1rem;
+    border-radius: 1rem;
+    max-width: 15rem;
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    box-shadow: -2px 2px 5px 0px var(--main-font-color);
+    transition: max-width 0.5s;
+}
+
+.card:hover {
+    max-width: 16rem;
+}
+
+.title {
+    color: var(--main-font-color);
+    font-size: 1.2em;
+    margin: 1em;
+}
+
+.content {
+    color: var(--alternative-font-color);
+    font-size: 0.9em;
+    margin: 1em;
+    transition: color 0.3s;
+}
+
+
+.card a, .card a:visited {
+    font-weight: bold;
+    color: var(--alternative-font-color);
+    transition: color 0.3s, font-size 0.3s;
+}
+
+.card a:hover {
+    color: var(--alternative-bg-color);
+    font-size: 1.2em;
+}
